@@ -26,12 +26,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         //self.topTextField.becomeFirstResponder()
         //self.bottomTextField.becomeFirstResponder()
+        topTextField.defaultTextAttributes = memeTextAttributes
+        bottomTextField.defaultTextAttributes = memeTextAttributes
         topTextField.text = "TOP"
         topTextField.textAlignment = NSTextAlignment.center
         bottomTextField.text = "BOTTOM"
-        topTextField.textAlignment = .center
-        topTextField.defaultTextAttributes = memeTextAttributes
-        bottomTextField.defaultTextAttributes = memeTextAttributes
+        bottomTextField.textAlignment = .center
+        
         topTextField.delegate = self
         bottomTextField.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
@@ -54,6 +55,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             textField.text = ""
         }
         //topTextField.text = ""
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
 
