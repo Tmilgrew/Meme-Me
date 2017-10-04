@@ -46,8 +46,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         unsubscribeFromKeyboardNotifications()
     }
     
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        
+        topTextField.text = ""
     }
     
 
