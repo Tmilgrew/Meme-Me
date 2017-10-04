@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
     //These are the outlets for the image, two text fields, and Camera button
     @IBOutlet weak var imagePickerView: UIImageView!
@@ -20,18 +20,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         NSStrokeColorAttributeName:UIColor.black,
         NSForegroundColorAttributeName:UIColor.white,
         NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-        NSStrokeWidthAttributeName:3.0]
+        NSStrokeWidthAttributeName:-3.0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //self.topTextField.becomeFirstResponder()
         //self.bottomTextField.becomeFirstResponder()
         topTextField.text = "TOP"
-        self.topTextField.textAlignment = .center
+        topTextField.textAlignment = NSTextAlignment.center
         bottomTextField.text = "BOTTOM"
-        self.topTextField.textAlignment = .center
+        topTextField.textAlignment = .center
         topTextField.defaultTextAttributes = memeTextAttributes
         bottomTextField.defaultTextAttributes = memeTextAttributes
+        topTextField.delegate = self
+        bottomTextField.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -48,7 +50,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        topTextField.text = ""
+        if (textField.text == "TOP" || textField.text == "BOTTOM"){
+            textField.text = ""
+        }
+        //topTextField.text = ""
     }
     
 
