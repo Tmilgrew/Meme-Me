@@ -8,6 +8,23 @@
 
 import UIKit
 
+struct Meme {
+    
+    let textTop: String
+    let textBottom: String
+    let originalImage: UIImage
+    let memeImage: UIImage
+    
+    init(topText:String, bottomText:String, originalImage:UIImage, memedImage:UIImage){
+        self.textTop = topText
+        self.textBottom = bottomText
+        self.originalImage = originalImage
+        self.memeImage = memedImage
+    }
+    
+    
+}
+
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
     //These are the outlets for the image, two text fields, and Camera button
@@ -118,6 +135,26 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         return keyboardSize.cgRectValue.height
     }
     
+    func save() {
+        // Create the meme
+        let memedImage = generateMemedImage()
+        let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imagePickerView.image!, memedImage: memedImage)
+    }
+    
+    func generateMemedImage() -> UIImage {
+        
+        // TODO: Hide toolbar and navbar
+        
+        // Render view to an image
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
+        let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        // TODO: Show toolbar and navbar
+        
+        return memedImage
+    }
 
 }
 

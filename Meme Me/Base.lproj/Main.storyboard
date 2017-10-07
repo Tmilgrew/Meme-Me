@@ -54,45 +54,51 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cJL-QU-l6c">
                                 <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="559" id="Wfw-6H-iJB"/>
+                                </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2JF-qj-nHz">
-                                <rect key="frame" x="16" y="91" width="343" height="17"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KZs-TS-mnS">
+                                <rect key="frame" x="16" y="90" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="cU9-oK-rwU"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vaO-nd-a9B">
                                 <rect key="frame" x="16" y="586" width="343" height="17"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="2ev-3f-mad" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="25o-Bp-6ho"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="2JF-qj-nHz" secondAttribute="leading" id="ESq-wE-o65"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cJL-QU-l6c" secondAttribute="trailing" constant="-16" id="H2F-xY-nCC"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2ev-3f-mad" secondAttribute="bottom" id="K1o-Dh-3fi"/>
-                            <constraint firstItem="EVH-7y-RQV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="NiP-Fu-i6s"/>
-                            <constraint firstItem="cJL-QU-l6c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="SSi-fU-Z7P"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="vaO-nd-a9B" secondAttribute="leading" id="UJ9-Lh-tR8"/>
-                            <constraint firstItem="cJL-QU-l6c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="Yxx-fs-x1j"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="2ev-3f-mad" secondAttribute="trailing" constant="-16" id="gHT-ZU-Hsl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="vaO-nd-a9B" secondAttribute="trailing" id="ht4-cJ-aX7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="2JF-qj-nHz" secondAttribute="trailing" id="k1f-ad-JsP"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vaO-nd-a9B" secondAttribute="bottom" constant="64" id="o4J-VJ-tmG"/>
-                            <constraint firstItem="2JF-qj-nHz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="71" id="vxf-cF-Sxc"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cJL-QU-l6c" secondAttribute="bottom" constant="44" id="xdx-ab-oNu"/>
-                            <constraint firstItem="EVH-7y-RQV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="y3u-tf-WaR"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="EVH-7y-RQV" secondAttribute="trailing" constant="-16" id="zLy-1W-Yoe"/>
+                            <constraint firstItem="EVH-7y-RQV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="20" id="0or-b6-fBf"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="cJL-QU-l6c" secondAttribute="bottom" constant="44" id="2mm-66-jsq"/>
+                            <constraint firstItem="cJL-QU-l6c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5F4-dJ-P5Y"/>
+                            <constraint firstAttribute="trailing" secondItem="KZs-TS-mnS" secondAttribute="trailing" constant="16" id="8w4-9N-7ep"/>
+                            <constraint firstItem="KZs-TS-mnS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="DhJ-LK-rHs"/>
+                            <constraint firstAttribute="trailing" secondItem="vaO-nd-a9B" secondAttribute="trailing" constant="16" id="OhQ-fJ-fYP"/>
+                            <constraint firstAttribute="trailing" secondItem="EVH-7y-RQV" secondAttribute="trailing" id="QQd-ek-6Is"/>
+                            <constraint firstAttribute="trailing" secondItem="cJL-QU-l6c" secondAttribute="trailing" id="S7H-En-cob"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="vaO-nd-a9B" secondAttribute="bottom" constant="64" id="WFk-5L-yTf"/>
+                            <constraint firstItem="vaO-nd-a9B" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="WoH-OJ-UWR"/>
+                            <constraint firstItem="EVH-7y-RQV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cSZ-18-5tL"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="2ev-3f-mad" secondAttribute="bottom" id="cbc-9g-7N0"/>
+                            <constraint firstItem="cJL-QU-l6c" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="64" id="dMI-qo-MzW"/>
+                            <constraint firstItem="2ev-3f-mad" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="k9T-Fz-v2C"/>
+                            <constraint firstItem="KZs-TS-mnS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="90" id="kFp-6j-YK6"/>
+                            <constraint firstAttribute="trailing" secondItem="2ev-3f-mad" secondAttribute="trailing" id="kdL-0h-Ivz"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="bottomTextField" destination="vaO-nd-a9B" id="UDF-oF-NS2"/>
                         <outlet property="cameraButton" destination="5RJ-YM-jmf" id="YWn-db-Uql"/>
                         <outlet property="imagePickerView" destination="cJL-QU-l6c" id="8B7-lY-gRW"/>
-                        <outlet property="topTextField" destination="2JF-qj-nHz" id="kvl-He-Ayu"/>
+                        <outlet property="topTextField" destination="KZs-TS-mnS" id="MKh-Id-Buh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
