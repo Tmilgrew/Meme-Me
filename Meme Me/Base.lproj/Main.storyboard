@@ -28,7 +28,11 @@
                                     <constraint firstAttribute="width" constant="375" id="ZTa-hO-UEm"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Item" id="4pu-Y5-dSB"/>
+                                    <barButtonItem title="Share" id="4pu-Y5-dSB">
+                                        <connections>
+                                            <action selector="shareMeme:" destination="BYZ-38-t0r" id="AaO-xD-KQa"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ev-3f-mad" userLabel="Bottom ToolBar">
@@ -96,9 +100,12 @@
                     </view>
                     <connections>
                         <outlet property="bottomTextField" destination="vaO-nd-a9B" id="UDF-oF-NS2"/>
+                        <outlet property="bottomToolBar" destination="2ev-3f-mad" id="Wce-35-xVT"/>
                         <outlet property="cameraButton" destination="5RJ-YM-jmf" id="YWn-db-Uql"/>
                         <outlet property="imagePickerView" destination="cJL-QU-l6c" id="8B7-lY-gRW"/>
+                        <outlet property="shareButton" destination="4pu-Y5-dSB" id="YwF-nc-wXf"/>
                         <outlet property="topTextField" destination="KZs-TS-mnS" id="MKh-Id-Buh"/>
+                        <outlet property="topToolBar" destination="EVH-7y-RQV" id="ri1-Mi-smj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
