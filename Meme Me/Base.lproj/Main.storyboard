@@ -28,7 +28,7 @@
                                     <constraint firstAttribute="width" constant="375" id="ZTa-hO-UEm"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Share" id="4pu-Y5-dSB">
+                                    <barButtonItem systemItem="action" id="4pu-Y5-dSB">
                                         <connections>
                                             <action selector="shareMeme:" destination="BYZ-38-t0r" id="AaO-xD-KQa"/>
                                         </connections>
